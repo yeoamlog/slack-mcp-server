@@ -1,0 +1,23 @@
+# Slack MCP Server Core Dependencies
+# 개발하면서 필요한 패키지 추가 예정, 완성 후 uv pip freeze로 최종 생성
+
+# FastMCP Framework
+fastmcp>=0.2.0
+
+# Async HTTP Client  
+aiohttp>=3.9.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Development Dependencies (Optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Development will add more packages as needed:
+# - Testing: pytest, pytest-asyncio
+# - Logging: rich, structlog  
+# - File handling: aiofiles
+# - etc.
+
+# Final requirements.txt will be generated with: uv pip freeze > requirements.txt

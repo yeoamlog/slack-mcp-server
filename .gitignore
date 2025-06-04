@@ -1,0 +1,413 @@
+# Slack MCP Server - .gitignore
+# ================================
+
+# =============================================================================
+# 환경 변수 및 보안 관련 파일
+# =============================================================================
+
+# 환경 변수 파일 (토큰 정보 포함)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# 백업 환경 파일
+.env.backup
+.env.bak
+.env.old
+
+# 설정 파일 (토큰 등 민감 정보 포함 시)
+config.json
+secrets.json
+tokens.json
+
+# =============================================================================
+# Python 관련
+# =============================================================================
+
+# 바이트 코드 파일
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C 확장
+*.so
+
+# 배포 파일
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 단위 테스트 / 커버리지 보고서
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+trials/
+test_files/
+.env(2).example
+.gitignore(2)
+
+# 번역
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx 문서
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# 가상환경
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# =============================================================================
+# uv (Python 패키지 매니저) 관련
+# =============================================================================
+
+# uv 락 파일 (프로젝트에 따라 포함할 수도 있음)
+# uv.lock
+
+# uv 캐시
+.uv/
+
+# =============================================================================
+# 에디터 및 IDE 관련
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (PyCharm, IntelliJ, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# 운영체제 관련
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS 썸네일
+._*
+
+# macOS 디렉토리 속성
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# =============================================================================
+# 로그 파일
+# =============================================================================
+
+# 일반 로그 파일
+*.log
+logs/
+log/
+
+# 뽀모도로 타이머 관련 로그
+pomodoro_*.log
+timer_*.log
+
+# Slack API 관련 로그
+slack_*.log
+api_*.log
+
+# MCP 서버 로그
+mcp_*.log
+server_*.log
+
+# =============================================================================
+# 임시 파일 및 백업
+# =============================================================================
+
+# 임시 파일
+tmp/
+temp/
+*.tmp
+*.temp
+
+# 백업 파일
+*.bak
+*.backup
+*.old
+*~
+
+# 에디터 백업
+*~
+*.swp
+*.swo
+
+# =============================================================================
+# 테스트 관련
+# =============================================================================
+
+# 테스트 결과
+test-results/
+test_results/
+.coverage
+coverage.xml
+*.cover
+
+# 테스트 데이터
+test_data/
+test_files/
+test_uploads/
+
+# pytest
+.pytest_cache/
+
+# =============================================================================
+# 프로젝트별 파일
+# =============================================================================
+
+# 테스트용 업로드 파일들
+test_upload_*.txt
+test_upload_*.pdf
+test_upload_*.jpg
+test_upload_*.png
+sample_*.txt
+
+# 뽀모도로 타이머 상태 파일 (있다면)
+timer_state.json
+active_timers.json
+
+# 임시 슬랙 데이터
+slack_cache/
+slack_temp/
+
+# 개발 중 생성된 테스트 파일들
+dev_test_*
+debug_*
+scratch_*
+
+# =============================================================================
+# 의존성 관련
+# =============================================================================
+
+# Node.js (혹시 프론트엔드 추가 시)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# 문서 관련
+# =============================================================================
+
+# 빌드된 문서
+docs/_build/
+docs/build/
+site/
+
+# 임시 문서 파일
+*.docx~
+*.xlsx~
+*.pptx~
+
+# =============================================================================
+# 배포 및 패키징
+# =============================================================================
+
+# Docker
+.dockerignore
+Dockerfile.dev
+
+# GitHub Actions secrets (로컬 테스트용)
+.github/workflows/.env
+
+# Heroku
+.env.production
+
+# =============================================================================
+# 개발 도구 관련
+# =============================================================================
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Black (코드 포매터)
+.black
+
+# mypy
+.mypy_cache/
+
+# =============================================================================
+# 특별 주의사항
+# =============================================================================
+
+# ⚠️ 절대 커밋하면 안 되는 파일들:
+# - .env (Slack 토큰 포함)
+# - 실제 API 키나 토큰이 포함된 모든 파일
+# - 개인 정보가 포함된 테스트 데이터
+# - 프로덕션 설정 파일
+
+# ✅ 커밋해야 하는 파일들:
+# - .env.example (토큰 제외한 템플릿)
+# - requirements.txt 또는 pyproject.toml
+# - 소스 코드 (.py 파일들)
+# - README.md
+# - .gitignore (이 파일)
+
+# =============================================================================
+# 추가 프로젝트별 무시 파일
+# =============================================================================
+
+# 향후 추가될 수 있는 파일들을 위한 공간
+# 예: 데이터베이스 파일, 캐시 파일 등
